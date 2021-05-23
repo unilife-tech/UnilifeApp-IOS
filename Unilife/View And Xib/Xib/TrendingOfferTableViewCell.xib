@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Arcon-Regular.otf">
+            <string>Arcon-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="TrendingTableViewCell" rowHeight="230" id="W4y-VI-SLo" customClass="TrendingTableViewCell" customModule="Unilife" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="322" height="230"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="W4y-VI-SLo" id="jmk-XB-o8l">
+                <rect key="frame" x="0.0" y="0.0" width="322" height="229.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bxl-hP-rim">
+                        <rect key="frame" x="0.0" y="0.0" width="322" height="230.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trending Offers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hLI-FJ-SDR">
+                                <rect key="frame" x="8" y="12" width="222" height="30"/>
+                                <fontDescription key="fontDescription" name="Arcon-Regular" family="Arcon" pointSize="15"/>
+                                <color key="textColor" name="appDarKGray"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fF4-zO-nLc" customClass="SetButton" customModule="Unilife" customModuleProvider="target">
+                                <rect key="frame" x="234" y="12" width="80" height="30"/>
+                                <color key="backgroundColor" name="appSkyBlue"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="YBa-Pu-sHm"/>
+                                    <constraint firstAttribute="width" constant="80" id="aoo-Dx-YIb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Arcon-Regular" family="Arcon" pointSize="15"/>
+                                <state key="normal" title="View All">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="CornerRadius">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="ETh-bJ-XZs">
+                                <rect key="frame" x="8" y="68.5" width="306" height="150"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="ead-yT-6bA"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="tPc-v5-494">
+                                    <size key="itemSize" width="120" height="119"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="fF4-zO-nLc" secondAttribute="trailing" constant="8" id="3ek-vO-m0m"/>
+                            <constraint firstItem="fF4-zO-nLc" firstAttribute="leading" secondItem="hLI-FJ-SDR" secondAttribute="trailing" constant="4" id="6y9-0N-soE"/>
+                            <constraint firstItem="fF4-zO-nLc" firstAttribute="leading" secondItem="hLI-FJ-SDR" secondAttribute="trailing" constant="4" id="FYp-gU-XGm"/>
+                            <constraint firstItem="ETh-bJ-XZs" firstAttribute="trailing" secondItem="fF4-zO-nLc" secondAttribute="trailing" id="Uu5-0B-dyb"/>
+                            <constraint firstItem="ETh-bJ-XZs" firstAttribute="top" secondItem="hLI-FJ-SDR" secondAttribute="bottom" constant="26.5" id="Xau-7L-dLT"/>
+                            <constraint firstAttribute="bottom" secondItem="ETh-bJ-XZs" secondAttribute="bottom" constant="12" id="atX-Ld-MOS"/>
+                            <constraint firstItem="hLI-FJ-SDR" firstAttribute="top" secondItem="fF4-zO-nLc" secondAttribute="top" id="dd1-g0-wdS"/>
+                            <constraint firstItem="ETh-bJ-XZs" firstAttribute="leading" secondItem="hLI-FJ-SDR" secondAttribute="leading" id="mak-XT-56i"/>
+                            <constraint firstItem="hLI-FJ-SDR" firstAttribute="bottom" secondItem="fF4-zO-nLc" secondAttribute="bottom" id="u4u-sS-i8R"/>
+                            <constraint firstAttribute="height" constant="230.5" id="uSY-ZH-3gv"/>
+                            <constraint firstItem="hLI-FJ-SDR" firstAttribute="top" secondItem="bxl-hP-rim" secondAttribute="top" constant="12" id="unX-8i-g2n"/>
+                            <constraint firstItem="hLI-FJ-SDR" firstAttribute="leading" secondItem="bxl-hP-rim" secondAttribute="leading" constant="8" id="wbD-wk-0Rt"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="bxl-hP-rim" secondAttribute="bottom" id="5vp-fA-kvN"/>
+                    <constraint firstItem="bxl-hP-rim" firstAttribute="top" secondItem="jmk-XB-o8l" secondAttribute="top" id="Ebi-l4-rl2"/>
+                    <constraint firstItem="bxl-hP-rim" firstAttribute="leading" secondItem="jmk-XB-o8l" secondAttribute="leading" id="eQR-W8-tjd"/>
+                    <constraint firstAttribute="trailing" secondItem="bxl-hP-rim" secondAttribute="trailing" id="oyd-EW-BD8"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="offerTitle_lbl" destination="hLI-FJ-SDR" id="huz-AW-vlU"/>
+                <outlet property="offerView_height" destination="uSY-ZH-3gv" id="Rt2-L4-Mih"/>
+                <outlet property="offer_View" destination="bxl-hP-rim" id="NVm-br-dVM"/>
+                <outlet property="offers_CollectionView" destination="ETh-bJ-XZs" id="RjH-Df-S2F"/>
+                <outlet property="viewAll_btn" destination="fF4-zO-nLc" id="EIn-13-tdd"/>
+            </connections>
+            <point key="canvasLocation" x="70.400000000000006" y="-22.488755622188908"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="appDarKGray">
+            <color red="0.2669999897480011" green="0.2669999897480011" blue="0.2669999897480011" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="appSkyBlue">
+            <color red="0.0" green="0.68627450980392157" blue="0.93725490196078431" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

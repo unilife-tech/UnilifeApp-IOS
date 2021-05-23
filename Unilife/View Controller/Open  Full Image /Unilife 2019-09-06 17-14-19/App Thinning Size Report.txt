@@ -1,0 +1,99 @@
+
+App Thinning Size Report for All Variants of Unilife
+
+Variant: Unilife-13468F36-E4D7-4ED8-8AA8-A7246C5F9B58.ipa
+Supported variant descriptors: [device: iPhone6,2, os-version: 12], [device: iPhone8,1, os-version: 12], [device: iPhone8,4, os-version: 12], [device: iPhone6,1, os-version: 12], [device: iPhone7,2, os-version: 12], and [device: iPod7,1, os-version: 12]
+App + On Demand Resources size: 7.1 MB compressed, 37.6 MB uncompressed
+App size: 7.1 MB compressed, 37.6 MB uncompressed
+On Demand Resources size: Zero KB compressed, Zero KB uncompressed
+
+
+Variant: Unilife-3397DFD5-EA90-4E4A-82F1-64EF1CC53971.ipa
+Supported variant descriptors: [device: iPhone8,2, os-version: 12]
+App + On Demand Resources size: 8 MB compressed, 37.6 MB uncompressed
+App size: 8 MB compressed, 37.6 MB uncompressed
+On Demand Resources size: Zero KB compressed, Zero KB uncompressed
+
+
+Variant: Unilife-4013157F-5886-41EC-AB4D-0EC16A5624E4.ipa
+Supported variant descriptors: [device: iPad5,3, os-version: 12], [device: iPad5,2, os-version: 12], [device: iPad4,8, os-version: 12], [device: iPad7,6, os-version: 12], [device: iPad4,5, os-version: 12], [device: iPad4,2, os-version: 12], [device: iPad4,3, os-version: 12], [device: iPad4,7, os-version: 12], [device: iPad4,4, os-version: 12], [device: iPad4,6, os-version: 12], [device: iPad4,1, os-version: 12], [device: iPad5,1, os-version: 12], [device: iPad6,12, os-version: 12], [device: iPad7,5, os-version: 12], [device: iPad5,4, os-version: 12], [device: iPad4,9, os-version: 12], [device: iPad6,11, os-version: 12], [device: iPad6,8, os-version: 12], and [device: iPad6,7, os-version: 12]
+App + On Demand Resources size: 7.2 MB compressed, 37.6 MB uncompressed
+App size: 7.2 MB compressed, 37.6 MB uncompressed
+On Demand Resources size: Zero KB compressed, Zero KB uncompressed
+
+
+Variant: Unilife-5766D7AF-7E94-44CB-9D0A-58CFA5011D2E.ipa
+Supported variant descriptors: [device: iPad8,3, os-version: 12], [device: iPad8,4, os-version: 12], [device: iPad7,2, os-version: 12], [device: iPad8,2, os-version: 12], [device: iPad6,4, os-version: 12], [device: iPad8,8, os-version: 12], [device: iPad7,3, os-version: 12], [device: iPad8,1, os-version: 12], [device: iPad7,1, os-version: 12], [device: iPad8,7, os-version: 12], [device: iPad8,6, os-version: 12], [device: iPad7,4, os-version: 12], [device: iPad6,3, os-version: 12], and [device: iPad8,5, os-version: 12]
+App + On Demand Resources size: 7.2 MB compressed, 37.6 MB uncompressed
+App size: 7.2 MB compressed, 37.6 MB uncompressed
+On Demand Resources size: Zero KB compressed, Zero KB uncompressed
+
+
+Variant: Unilife-620A56D5-F7CC-4C18-AA2C-C33A1F8111B4.ipa
+Supported variant descriptors: [device: iPhone11,8, os-version: 12]
+App + On Demand Resources size: 7.2 MB compressed, 37.6 MB uncompressed
+App size: 7.2 MB compressed, 37.6 MB uncompressed
+On Demand Resources size: Zero KB compressed, Zero KB uncompressed
+
+
+Variant: Unilife-63B4CE38-19E0-4C54-B47B-34C9DB0B13AE.ipa
+Supported variant descriptors: [device: iPhone10,2, os-version: 11], [device: iPhone10,5, os-version: 11], [device: iPhone10,6, os-version: 11], [device: iPhone10,3, os-version: 11], [device: iPhone9,2, os-version: 11], and [device: iPhone9,4, os-version: 11]
+App + On Demand Resources size: 10.4 MB compressed, 37.6 MB uncompressed
+App size: 10.4 MB compressed, 37.6 MB uncompressed
+On Demand Resources size: Zero KB compressed, Zero KB uncompressed
+
+
+Variant: Unilife-697953C5-A470-4263-AF9F-46324CEECCF4.ipa
+Supported variant descriptors: [device: iPhone7,2, os-version: 11], [device: iPhone6,2, os-version: 11], [device: iPod7,1, os-version: 11], [device: iPhone8,4, os-version: 11], [device: iPhone8,1, os-version: 11], and [device: iPhone6,1, os-version: 11]
+App + On Demand Resources size: 8.9 MB compressed, 37.6 MB uncompressed
+App size: 8.9 MB compressed, 37.6 MB uncompressed
+On Demand Resources size: Zero KB compressed, Zero KB uncompressed
+
+
+Variant: Unilife-8AA5AB33-AECB-476D-A136-CF0A7F355FD0.ipa
+Supported variant descriptors: [device: iPad4,2, os-version: 11], [device: iPad4,8, os-version: 11], [device: iPad5,1, os-version: 11], [device: iPad4,3, os-version: 11], [device: iPad5,4, os-version: 11], [device: iPad6,8, os-version: 11], [device: iPad5,3, os-version: 11], [device: iPad4,7, os-version: 11], [device: iPad5,2, os-version: 11], [device: iPad7,5, os-version: 11], [device: iPad4,5, os-version: 11], [device: iPad4,6, os-version: 11], [device: iPad6,11, os-version: 11], [device: iPad4,9, os-version: 11], [device: iPad7,6, os-version: 11], [device: iPad6,7, os-version: 11], [device: iPad4,1, os-version: 11], [device: iPad4,4, os-version: 11], and [device: iPad6,12, os-version: 11]
+App + On Demand Resources size: 9 MB compressed, 37.6 MB uncompressed
+App size: 9 MB compressed, 37.6 MB uncompressed
+On Demand Resources size: Zero KB compressed, Zero KB uncompressed
+
+
+Variant: Unilife-91535543-E8B1-422A-98BC-F5B77466E344.ipa
+Supported variant descriptors: [device: iPhone7,1, os-version: 11] and [device: iPhone8,2, os-version: 11]
+App + On Demand Resources size: 10.4 MB compressed, 37.6 MB uncompressed
+App size: 10.4 MB compressed, 37.6 MB uncompressed
+On Demand Resources size: Zero KB compressed, Zero KB uncompressed
+
+
+Variant: Unilife-93ACE594-279D-48CD-A595-BBCEA4712EBE.ipa
+Supported variant descriptors: [device: iPhone10,4, os-version: 12], [device: iPhone9,1, os-version: 12], [device: iPhone10,1, os-version: 12], and [device: iPhone9,3, os-version: 12]
+App + On Demand Resources size: 7.1 MB compressed, 37.6 MB uncompressed
+App size: 7.1 MB compressed, 37.6 MB uncompressed
+On Demand Resources size: Zero KB compressed, Zero KB uncompressed
+
+
+Variant: Unilife-947C55BC-D600-44A1-BF8E-C4355C61CA59.ipa
+Supported variant descriptors: [device: iPhone9,3, os-version: 11], [device: iPhone10,1, os-version: 11], [device: iPhone10,4, os-version: 11], and [device: iPhone9,1, os-version: 11]
+App + On Demand Resources size: 8.9 MB compressed, 37.6 MB uncompressed
+App size: 8.9 MB compressed, 37.6 MB uncompressed
+On Demand Resources size: Zero KB compressed, Zero KB uncompressed
+
+
+Variant: Unilife-B74F9124-0461-4B5A-9369-75A983F55BEE.ipa
+Supported variant descriptors: [device: iPad7,3, os-version: 11], [device: iPad7,1, os-version: 11], [device: iPad7,4, os-version: 11], [device: iPad7,2, os-version: 11], [device: iPad6,3, os-version: 11], and [device: iPad6,4, os-version: 11]
+App + On Demand Resources size: 9 MB compressed, 37.6 MB uncompressed
+App size: 9 MB compressed, 37.6 MB uncompressed
+On Demand Resources size: Zero KB compressed, Zero KB uncompressed
+
+
+Variant: Unilife-CD5E48B5-3F70-417D-A8A4-7CAAE23D3DE4.ipa
+Supported variant descriptors: [device: iPhone10,3, os-version: 12], [device: iPhone10,5, os-version: 12], [device: iPhone10,6, os-version: 12], [device: iPhone11,4, os-version: 12], [device: iPhone9,2, os-version: 12], [device: iPhone10,2, os-version: 12], [device: iPhone11,6, os-version: 12], [device: iPhone9,4, os-version: 12], and [device: iPhone11,2, os-version: 12]
+App + On Demand Resources size: 8 MB compressed, 37.6 MB uncompressed
+App size: 8 MB compressed, 37.6 MB uncompressed
+On Demand Resources size: Zero KB compressed, Zero KB uncompressed
+
+
+Variant: Unilife.ipa
+Supported variant descriptors: Universal
+App + On Demand Resources size: 18 MB compressed, 37.6 MB uncompressed
+App size: 18 MB compressed, 37.6 MB uncompressed
+On Demand Resources size: Zero KB compressed, Zero KB uncompressed

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Arcon-Regular.otf">
+            <string>Arcon-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="LatestBlogTableViewCell" rowHeight="194" id="cnE-xA-rwH" customClass="LatestBlogTableViewCell" customModule="Unilife" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="194"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cnE-xA-rwH" id="01J-z9-F7N">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="193.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yUb-1c-obI">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="176"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sgZ-bU-c7N" customClass="SetButton" customModule="Unilife" customModuleProvider="target">
+                                <rect key="frame" x="228" y="8" width="80" height="30"/>
+                                <color key="backgroundColor" name="appSkyBlue"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="dtu-TG-dke"/>
+                                    <constraint firstAttribute="height" constant="30" id="uwb-xy-icX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Arcon-Regular" family="Arcon" pointSize="15"/>
+                                <state key="normal" title="View All">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="CornerRadius">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="q4x-zL-NOV" customClass="CircleImage" customModule="Unilife" customModuleProvider="target">
+                                <rect key="frame" x="12" y="13" width="20" height="20"/>
+                                <color key="backgroundColor" name="appSkyBlue"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="3s2-bW-Ljo"/>
+                                    <constraint firstAttribute="height" constant="20" id="gXd-h9-lkq"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Latest Blogs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Cg-sw-bbu">
+                                <rect key="frame" x="40" y="8" width="184" height="30"/>
+                                <fontDescription key="fontDescription" name="Arcon-Regular" family="Arcon" pointSize="16"/>
+                                <color key="textColor" name="appDarKGray"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ggS-Mb-Ee7">
+                                <rect key="frame" x="21.5" y="33" width="1" height="135"/>
+                                <color key="backgroundColor" name="appLightGreyColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="1" id="Tl7-8G-oP3"/>
+                                </constraints>
+                            </view>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="IXF-Mr-exu">
+                                <rect key="frame" x="40" y="48" width="268" height="120"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="hy6-Jo-9Ko"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="xiO-Xe-w3o">
+                                    <size key="itemSize" width="152" height="120"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="sgZ-bU-c7N" firstAttribute="top" secondItem="yUb-1c-obI" secondAttribute="top" constant="8" id="1Ur-jb-Dsn"/>
+                            <constraint firstItem="ggS-Mb-Ee7" firstAttribute="centerX" secondItem="q4x-zL-NOV" secondAttribute="centerX" id="754-4j-5Ct"/>
+                            <constraint firstAttribute="trailing" secondItem="sgZ-bU-c7N" secondAttribute="trailing" constant="12" id="7Hv-3j-G7N"/>
+                            <constraint firstItem="q4x-zL-NOV" firstAttribute="centerY" secondItem="7Cg-sw-bbu" secondAttribute="centerY" id="AUY-KJ-u23"/>
+                            <constraint firstItem="7Cg-sw-bbu" firstAttribute="bottom" secondItem="sgZ-bU-c7N" secondAttribute="bottom" id="BIr-x0-PV3"/>
+                            <constraint firstItem="7Cg-sw-bbu" firstAttribute="top" secondItem="sgZ-bU-c7N" secondAttribute="top" id="Fch-o1-hF4"/>
+                            <constraint firstItem="IXF-Mr-exu" firstAttribute="trailing" secondItem="sgZ-bU-c7N" secondAttribute="trailing" id="GUG-1E-XjU"/>
+                            <constraint firstAttribute="height" constant="176" id="Gxd-0P-bIv"/>
+                            <constraint firstItem="IXF-Mr-exu" firstAttribute="top" secondItem="sgZ-bU-c7N" secondAttribute="bottom" constant="10" id="JUY-uw-HFX"/>
+                            <constraint firstItem="q4x-zL-NOV" firstAttribute="leading" secondItem="yUb-1c-obI" secondAttribute="leading" constant="12" id="L0u-vp-KpR"/>
+                            <constraint firstItem="ggS-Mb-Ee7" firstAttribute="bottom" secondItem="IXF-Mr-exu" secondAttribute="bottom" id="OWq-e3-vgp"/>
+                            <constraint firstItem="IXF-Mr-exu" firstAttribute="leading" secondItem="7Cg-sw-bbu" secondAttribute="leading" id="RAk-cs-3DB"/>
+                            <constraint firstItem="ggS-Mb-Ee7" firstAttribute="top" secondItem="q4x-zL-NOV" secondAttribute="top" constant="20" id="Xvj-VJ-H4T"/>
+                            <constraint firstItem="sgZ-bU-c7N" firstAttribute="leading" secondItem="7Cg-sw-bbu" secondAttribute="trailing" constant="4" id="cFn-Lo-9bq"/>
+                            <constraint firstAttribute="bottom" secondItem="IXF-Mr-exu" secondAttribute="bottom" constant="8" id="dZe-BE-DsF"/>
+                            <constraint firstItem="7Cg-sw-bbu" firstAttribute="leading" secondItem="q4x-zL-NOV" secondAttribute="trailing" constant="8" id="ppd-2P-iUV"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="yUb-1c-obI" firstAttribute="leading" secondItem="01J-z9-F7N" secondAttribute="leading" id="4Xu-9G-Vrw"/>
+                    <constraint firstItem="yUb-1c-obI" firstAttribute="top" secondItem="01J-z9-F7N" secondAttribute="top" id="iO5-Mc-Gox"/>
+                    <constraint firstAttribute="trailing" secondItem="yUb-1c-obI" secondAttribute="trailing" id="kY6-We-fyK"/>
+                    <constraint firstAttribute="bottom" secondItem="yUb-1c-obI" secondAttribute="bottom" id="uT5-Qt-AEC"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="blogViewAll_btn" destination="sgZ-bU-c7N" id="4MW-ph-m6j"/>
+                <outlet property="blogs_CollectionView" destination="IXF-Mr-exu" id="8kX-q6-m3v"/>
+                <outlet property="latestBlogView_height" destination="Gxd-0P-bIv" id="YuY-hx-rQ5"/>
+                <outlet property="latestBlogsValue_lbl" destination="7Cg-sw-bbu" id="wFz-8h-JTi"/>
+                <outlet property="point_ImageView" destination="q4x-zL-NOV" id="zK0-0c-g1c"/>
+                <outlet property="show_View" destination="ggS-Mb-Ee7" id="oV4-Nr-hdm"/>
+            </connections>
+            <point key="canvasLocation" x="116.8" y="-137.6311844077961"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="appDarKGray">
+            <color red="0.2669999897480011" green="0.2669999897480011" blue="0.2669999897480011" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="appLightGreyColor">
+            <color red="0.62400001287460327" green="0.61599999666213989" blue="0.61599999666213989" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="appSkyBlue">
+            <color red="0.0" green="0.68627450980392157" blue="0.93725490196078431" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

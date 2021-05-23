@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Arcon-Regular.otf">
+            <string>Arcon-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ViewSavedBlogsCollectionViewCell" id="wau-4g-KNe" customClass="ViewSavedBlogsCollectionViewCell" customModule="Unilife" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="183" height="190"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                <rect key="frame" x="0.0" y="0.0" width="183" height="190"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dZd-RN-2b9">
+                        <rect key="frame" x="0.0" y="0.0" width="183" height="190"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hc4-7s-13f" customClass="UIViewShadow" customModule="Unilife" customModuleProvider="target">
+                                <rect key="frame" x="8" y="8" width="167" height="100"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="noimage_icon" translatesAutoresizingMaskIntoConstraints="NO" id="CJr-lx-jqh" customClass="SetImage" customModule="Unilife" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="167" height="100"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="CornerRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="CJr-lx-jqh" secondAttribute="bottom" id="0PR-S7-U42"/>
+                                    <constraint firstAttribute="trailing" secondItem="CJr-lx-jqh" secondAttribute="trailing" id="BAI-WP-Iob"/>
+                                    <constraint firstItem="CJr-lx-jqh" firstAttribute="leading" secondItem="Hc4-7s-13f" secondAttribute="leading" id="DNY-Jb-bgD"/>
+                                    <constraint firstItem="CJr-lx-jqh" firstAttribute="top" secondItem="Hc4-7s-13f" secondAttribute="top" id="RB4-oD-Kfx"/>
+                                    <constraint firstAttribute="height" constant="100" id="euw-hw-gxd"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                        <size key="value" width="1" height="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" name="appLightGreyColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AMP-7Q-cKV">
+                                <rect key="frame" x="8" y="116" width="167" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="fk0-36-fZZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Arcon-Regular" family="Arcon" pointSize="11"/>
+                                <color key="textColor" name="appDarKGray"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c1t-It-7en" customClass="SetButton" customModule="Unilife" customModuleProvider="target">
+                                <rect key="frame" x="56.5" y="148" width="70" height="30"/>
+                                <color key="backgroundColor" name="appSkyBlue"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="KVA-Hu-bCL"/>
+                                    <constraint firstAttribute="height" constant="30" id="Why-ww-GKn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Arcon-Regular" family="Arcon" pointSize="15"/>
+                                <state key="normal" title="View">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="CornerRadius">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="c1t-It-7en" secondAttribute="bottom" constant="12" id="06K-Wa-2mQ"/>
+                            <constraint firstItem="AMP-7Q-cKV" firstAttribute="leading" secondItem="CJr-lx-jqh" secondAttribute="leading" id="0Rz-ld-vcf"/>
+                            <constraint firstItem="AMP-7Q-cKV" firstAttribute="top" secondItem="Hc4-7s-13f" secondAttribute="bottom" constant="8" id="1Za-ue-iNt"/>
+                            <constraint firstItem="AMP-7Q-cKV" firstAttribute="trailing" secondItem="CJr-lx-jqh" secondAttribute="trailing" id="6Fq-kR-2h1"/>
+                            <constraint firstItem="Hc4-7s-13f" firstAttribute="leading" secondItem="dZd-RN-2b9" secondAttribute="leading" constant="8" id="FfZ-iB-UWg"/>
+                            <constraint firstAttribute="trailing" secondItem="Hc4-7s-13f" secondAttribute="trailing" constant="8" id="VKr-9r-onK"/>
+                            <constraint firstItem="c1t-It-7en" firstAttribute="centerX" secondItem="dZd-RN-2b9" secondAttribute="centerX" id="aiD-43-n1w"/>
+                            <constraint firstAttribute="height" constant="190" id="oqa-dF-MGb"/>
+                            <constraint firstItem="c1t-It-7en" firstAttribute="top" secondItem="AMP-7Q-cKV" secondAttribute="bottom" constant="12" id="plG-Ef-CF9"/>
+                            <constraint firstItem="Hc4-7s-13f" firstAttribute="top" secondItem="dZd-RN-2b9" secondAttribute="top" constant="8" id="z70-SF-eVx"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="dZd-RN-2b9" firstAttribute="leading" secondItem="wau-4g-KNe" secondAttribute="leading" id="DXv-h3-gAL"/>
+                <constraint firstItem="dZd-RN-2b9" firstAttribute="top" secondItem="wau-4g-KNe" secondAttribute="top" id="ckL-Cr-Vz7"/>
+                <constraint firstAttribute="bottom" secondItem="dZd-RN-2b9" secondAttribute="bottom" id="u74-Sk-sPu"/>
+                <constraint firstAttribute="trailing" secondItem="dZd-RN-2b9" secondAttribute="trailing" id="uj3-4V-eAX"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="QUq-tC-TvY"/>
+            <size key="customSize" width="183" height="190"/>
+            <connections>
+                <outlet property="blogDescription_lbl" destination="AMP-7Q-cKV" id="YFC-gY-NzD"/>
+                <outlet property="blog_ImageView" destination="CJr-lx-jqh" id="FE8-Vy-G57"/>
+                <outlet property="viewBlog_btn" destination="c1t-It-7en" id="A9V-Fh-HI3"/>
+            </connections>
+            <point key="canvasLocation" x="36" y="117.84107946026987"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="noimage_icon" width="100" height="100"/>
+        <namedColor name="appDarKGray">
+            <color red="0.2669999897480011" green="0.2669999897480011" blue="0.2669999897480011" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="appLightGreyColor">
+            <color red="0.62400001287460327" green="0.61599999666213989" blue="0.61599999666213989" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="appSkyBlue">
+            <color red="0.0" green="0.68627450980392157" blue="0.93725490196078431" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

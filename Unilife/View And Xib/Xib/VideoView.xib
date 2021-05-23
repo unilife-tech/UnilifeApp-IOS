@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="VideoView" customModule="Unilife" customModuleProvider="target">
+            <connections>
+                <outlet property="content_view" destination="0Xt-G4-QvX" id="nEu-FQ-x3X"/>
+                <outlet property="currentTime_lbl" destination="ydM-8w-VPA" id="ryq-X3-bZs"/>
+                <outlet property="play_btn" destination="kmQ-NQ-OtQ" id="04Y-G4-6bU"/>
+                <outlet property="retry_btn" destination="wFo-JP-caV" id="dwM-Na-nZS"/>
+                <outlet property="videoView" destination="PQR-qT-jNb" id="zCg-dk-cUt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="0Xt-G4-QvX">
+            <rect key="frame" x="0.0" y="0.0" width="441" height="191"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PQR-qT-jNb" customClass="BBPlayerView" customModule="BubbleBud" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="441" height="191"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nWW-eG-lVk">
+                            <rect key="frame" x="376" y="15" width="50" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="50" id="IA9-g8-fbt"/>
+                                <constraint firstAttribute="height" constant="50" id="bpT-Wx-YGh"/>
+                            </constraints>
+                            <state key="normal" title="Button"/>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="7UL-bv-dI9" firstAttribute="trailing" secondItem="nWW-eG-lVk" secondAttribute="trailing" constant="15" id="N2b-I2-PTO"/>
+                        <constraint firstItem="nWW-eG-lVk" firstAttribute="top" secondItem="7UL-bv-dI9" secondAttribute="top" constant="15" id="r8I-Hh-hdG"/>
+                    </constraints>
+                    <viewLayoutGuide key="safeArea" id="7UL-bv-dI9"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NN3-6L-t9s">
+                    <rect key="frame" x="16" y="159" width="60" height="16"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ydM-8w-VPA">
+                            <rect key="frame" x="0.0" y="0.0" width="60" height="16"/>
+                            <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="ydM-8w-VPA" firstAttribute="top" secondItem="NN3-6L-t9s" secondAttribute="top" id="2yT-aj-vht"/>
+                        <constraint firstAttribute="trailing" secondItem="ydM-8w-VPA" secondAttribute="trailing" id="May-yw-cr0"/>
+                        <constraint firstAttribute="height" constant="16" id="S7h-PR-f7s"/>
+                        <constraint firstAttribute="width" constant="60" id="giX-fb-04W"/>
+                        <constraint firstItem="ydM-8w-VPA" firstAttribute="leading" secondItem="NN3-6L-t9s" secondAttribute="leading" id="ilF-ht-Cu5"/>
+                        <constraint firstAttribute="bottom" secondItem="ydM-8w-VPA" secondAttribute="bottom" id="nEM-gW-1c6"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kmQ-NQ-OtQ">
+                    <rect key="frame" x="195.5" y="70.5" width="50" height="50"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="aFu-gt-pKr"/>
+                        <constraint firstAttribute="width" constant="50" id="gz3-ms-usY"/>
+                    </constraints>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" image="play_button"/>
+                    <connections>
+                        <action selector="playPressed:" destination="-1" eventType="touchUpInside" id="pdA-Gm-iTQ"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wFo-JP-caV">
+                    <rect key="frame" x="195.5" y="70.5" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="sre-ib-Zbq"/>
+                        <constraint firstAttribute="width" constant="50" id="u5n-QU-Xb1"/>
+                    </constraints>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" image="retry"/>
+                    <connections>
+                        <action selector="tapRetryButton:" destination="-1" eventType="touchUpInside" id="J09-sE-goD"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="PQR-qT-jNb" firstAttribute="leading" secondItem="Una-7p-4o8" secondAttribute="leading" id="6Zg-UH-Twa"/>
+                <constraint firstItem="Una-7p-4o8" firstAttribute="bottom" secondItem="NN3-6L-t9s" secondAttribute="bottom" constant="16" id="84Z-Qu-njr"/>
+                <constraint firstItem="kmQ-NQ-OtQ" firstAttribute="centerY" secondItem="0Xt-G4-QvX" secondAttribute="centerY" id="Q2n-zl-Wiu"/>
+                <constraint firstItem="NN3-6L-t9s" firstAttribute="leading" secondItem="Una-7p-4o8" secondAttribute="leading" constant="16" id="aFD-cw-Tsx"/>
+                <constraint firstItem="wFo-JP-caV" firstAttribute="centerY" secondItem="0Xt-G4-QvX" secondAttribute="centerY" id="cTd-aV-816"/>
+                <constraint firstAttribute="bottom" secondItem="PQR-qT-jNb" secondAttribute="bottom" id="dzL-eY-nfV"/>
+                <constraint firstItem="Una-7p-4o8" firstAttribute="trailing" secondItem="PQR-qT-jNb" secondAttribute="trailing" id="e3F-Jz-PMt"/>
+                <constraint firstItem="kmQ-NQ-OtQ" firstAttribute="centerX" secondItem="0Xt-G4-QvX" secondAttribute="centerX" id="jb4-WI-fJF"/>
+                <constraint firstItem="PQR-qT-jNb" firstAttribute="top" secondItem="0Xt-G4-QvX" secondAttribute="top" id="mSr-bx-Myo"/>
+                <constraint firstItem="wFo-JP-caV" firstAttribute="centerX" secondItem="0Xt-G4-QvX" secondAttribute="centerX" id="oAZ-D1-LQc"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="Una-7p-4o8"/>
+            <point key="canvasLocation" x="80.799999999999997" y="-161.46926536731635"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="play_button" width="45" height="45"/>
+        <image name="retry" width="45" height="45"/>
+    </resources>
+</document>

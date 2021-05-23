@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Arcon-Regular.otf">
+            <string>Arcon-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="BrandCouponsCollectionViewCell" id="D11-5v-nuQ" customClass="BrandCouponsCollectionViewCell" customModule="Unilife" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="246" height="196"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                <rect key="frame" x="0.0" y="0.0" width="246" height="196"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yZP-fI-Rb4">
+                        <rect key="frame" x="0.0" y="0.0" width="246" height="196"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coupaon" translatesAutoresizingMaskIntoConstraints="NO" id="r8y-HN-8o2">
+                                <rect key="frame" x="53" y="12" width="140" height="90"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="BvV-Ba-zVj"/>
+                                    <constraint firstAttribute="width" constant="140" id="Tna-fG-fb8"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coupons  Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kbe-Z5-uMd">
+                                <rect key="frame" x="8" y="110" width="230" height="22"/>
+                                <fontDescription key="fontDescription" name="Arcon-Regular" family="Arcon" pointSize="18"/>
+                                <color key="textColor" name="appDarKGray"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LiW-x1-nd4">
+                                <rect key="frame" x="8" y="144" width="230" height="46"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jgd-TA-ruz" customClass="SetButton" customModule="Unilife" customModuleProvider="target">
+                                        <rect key="frame" x="4" y="8" width="109" height="30"/>
+                                        <color key="backgroundColor" name="appSkyBlue"/>
+                                        <fontDescription key="fontDescription" name="Arcon-Regular" family="Arcon" pointSize="12"/>
+                                        <state key="normal" title="View Online">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="CornerRadius">
+                                                <real key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UBT-NL-E6Z" customClass="SetButton" customModule="Unilife" customModuleProvider="target">
+                                        <rect key="frame" x="117" y="8" width="109" height="30"/>
+                                        <color key="backgroundColor" name="appSkyBlue"/>
+                                        <fontDescription key="fontDescription" name="Arcon-Regular" family="Arcon" pointSize="12"/>
+                                        <state key="normal" title="View Instore">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="CornerRadius">
+                                                <real key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="UBT-NL-E6Z" firstAttribute="width" secondItem="Jgd-TA-ruz" secondAttribute="width" id="0cG-cd-PYf"/>
+                                    <constraint firstAttribute="bottom" secondItem="Jgd-TA-ruz" secondAttribute="bottom" constant="8" id="Kjg-ak-pbX"/>
+                                    <constraint firstAttribute="bottom" secondItem="UBT-NL-E6Z" secondAttribute="bottom" constant="8" id="PCo-ch-j10"/>
+                                    <constraint firstItem="Jgd-TA-ruz" firstAttribute="top" secondItem="LiW-x1-nd4" secondAttribute="top" constant="8" id="Yu3-6c-0JE"/>
+                                    <constraint firstItem="UBT-NL-E6Z" firstAttribute="leading" secondItem="Jgd-TA-ruz" secondAttribute="trailing" constant="4" id="byb-33-sfd"/>
+                                    <constraint firstAttribute="height" constant="46" id="g83-0T-Jl2"/>
+                                    <constraint firstItem="Jgd-TA-ruz" firstAttribute="leading" secondItem="LiW-x1-nd4" secondAttribute="leading" constant="4" id="iEI-pP-eM9"/>
+                                    <constraint firstAttribute="trailing" secondItem="UBT-NL-E6Z" secondAttribute="trailing" constant="4" id="lJA-zb-zek"/>
+                                    <constraint firstItem="UBT-NL-E6Z" firstAttribute="top" secondItem="LiW-x1-nd4" secondAttribute="top" constant="8" id="p6G-Yf-sCU"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ffex 546534743 coupon" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="epu-qm-GNj">
+                                <rect key="frame" x="53" y="39" width="140" height="36"/>
+                                <fontDescription key="fontDescription" name="Arcon-Regular" family="Arcon" pointSize="15"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="LiW-x1-nd4" firstAttribute="centerX" secondItem="yZP-fI-Rb4" secondAttribute="centerX" id="3uL-ws-bcz"/>
+                            <constraint firstAttribute="height" constant="196" id="53K-ar-rYt"/>
+                            <constraint firstItem="LiW-x1-nd4" firstAttribute="leading" secondItem="yZP-fI-Rb4" secondAttribute="leading" constant="8" id="5lK-HN-qta"/>
+                            <constraint firstAttribute="trailing" secondItem="Kbe-Z5-uMd" secondAttribute="trailing" constant="8" id="9tk-En-Whd"/>
+                            <constraint firstItem="Kbe-Z5-uMd" firstAttribute="centerX" secondItem="yZP-fI-Rb4" secondAttribute="centerX" id="B77-QS-jr7"/>
+                            <constraint firstItem="Kbe-Z5-uMd" firstAttribute="top" secondItem="r8y-HN-8o2" secondAttribute="bottom" constant="8" id="DlL-UO-7w7"/>
+                            <constraint firstItem="epu-qm-GNj" firstAttribute="leading" secondItem="r8y-HN-8o2" secondAttribute="leading" id="Hjv-7y-As0"/>
+                            <constraint firstItem="epu-qm-GNj" firstAttribute="centerX" secondItem="r8y-HN-8o2" secondAttribute="centerX" id="NgJ-Yw-NgR"/>
+                            <constraint firstItem="r8y-HN-8o2" firstAttribute="top" secondItem="yZP-fI-Rb4" secondAttribute="top" constant="12" id="O7u-4a-Ru3"/>
+                            <constraint firstItem="r8y-HN-8o2" firstAttribute="centerX" secondItem="yZP-fI-Rb4" secondAttribute="centerX" id="PJE-ey-csy"/>
+                            <constraint firstItem="Kbe-Z5-uMd" firstAttribute="leading" secondItem="yZP-fI-Rb4" secondAttribute="leading" constant="8" id="bEs-M2-5fz"/>
+                            <constraint firstAttribute="trailing" secondItem="LiW-x1-nd4" secondAttribute="trailing" constant="8" id="e6V-KP-kuY"/>
+                            <constraint firstItem="epu-qm-GNj" firstAttribute="centerY" secondItem="r8y-HN-8o2" secondAttribute="centerY" id="ozD-c0-NRL"/>
+                            <constraint firstItem="LiW-x1-nd4" firstAttribute="top" secondItem="Kbe-Z5-uMd" secondAttribute="bottom" constant="12" id="us7-IX-Rv4"/>
+                            <constraint firstItem="epu-qm-GNj" firstAttribute="trailing" secondItem="r8y-HN-8o2" secondAttribute="trailing" id="wZi-mv-nOX"/>
+                            <constraint firstAttribute="bottom" secondItem="LiW-x1-nd4" secondAttribute="bottom" constant="6" id="zMl-xU-EFM"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="yZP-fI-Rb4" secondAttribute="bottom" id="1jh-f8-ib9"/>
+                <constraint firstAttribute="trailing" secondItem="yZP-fI-Rb4" secondAttribute="trailing" id="Njn-y6-9hJ"/>
+                <constraint firstItem="yZP-fI-Rb4" firstAttribute="leading" secondItem="D11-5v-nuQ" secondAttribute="leading" id="a46-gy-XRu"/>
+                <constraint firstItem="yZP-fI-Rb4" firstAttribute="top" secondItem="D11-5v-nuQ" secondAttribute="top" id="x02-D1-at4"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="aEq-To-CfM"/>
+            <size key="customSize" width="246" height="196"/>
+            <connections>
+                <outlet property="couponCode_lbl" destination="epu-qm-GNj" id="7RQ-0o-MzA"/>
+                <outlet property="couponName_lbl" destination="Kbe-Z5-uMd" id="zHW-TY-C1H"/>
+                <outlet property="coupon_ImageView" destination="r8y-HN-8o2" id="FA1-OI-U55"/>
+                <outlet property="viewInStore_btn" destination="UBT-NL-E6Z" id="sjc-Ee-Ot4"/>
+                <outlet property="viewOnline_btn" destination="Jgd-TA-ruz" id="DpM-1N-11E"/>
+            </connections>
+            <point key="canvasLocation" x="-36.799999999999997" y="303.14842578710648"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="coupaon" width="500" height="283"/>
+        <namedColor name="appDarKGray">
+            <color red="0.2669999897480011" green="0.2669999897480011" blue="0.2669999897480011" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="appSkyBlue">
+            <color red="0.0" green="0.68627450980392157" blue="0.93725490196078431" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

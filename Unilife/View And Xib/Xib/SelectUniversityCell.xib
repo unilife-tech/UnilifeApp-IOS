@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Arcon-Regular.otf">
+            <string>Arcon-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="SelectUniversityTableViewCell" rowHeight="40" id="DxU-AM-FHk" customClass="SelectUniversityTableViewCell" customModule="Unilife" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="374" height="40"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DxU-AM-FHk" id="Iqo-Pw-oJ5">
+                <rect key="frame" x="0.0" y="0.0" width="374" height="39.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pXO-dG-GcP">
+                        <rect key="frame" x="0.0" y="0.0" width="374" height="40.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4mu-KN-kBQ">
+                                <rect key="frame" x="8" y="0.0" width="334" height="40.5"/>
+                                <fontDescription key="fontDescription" name="Arcon-Regular" family="Arcon" pointSize="15"/>
+                                <color key="textColor" name="appDarKGray"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CCk-RX-y81">
+                                <rect key="frame" x="346" y="10.5" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="d1V-av-M2W"/>
+                                    <constraint firstAttribute="height" constant="20" id="imT-KS-2lc"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MqL-m3-OFc">
+                                <rect key="frame" x="0.0" y="37.5" width="374" height="1"/>
+                                <color key="backgroundColor" name="appDarKGray"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="2t1-Tk-fde"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="MqL-m3-OFc" firstAttribute="leading" secondItem="pXO-dG-GcP" secondAttribute="leading" id="0sC-gP-aiS"/>
+                            <constraint firstAttribute="bottom" secondItem="4mu-KN-kBQ" secondAttribute="bottom" id="14H-UZ-Eef"/>
+                            <constraint firstAttribute="trailing" secondItem="MqL-m3-OFc" secondAttribute="trailing" id="7P4-3V-MEP"/>
+                            <constraint firstAttribute="height" constant="40" id="C8k-mr-76i"/>
+                            <constraint firstAttribute="bottom" secondItem="MqL-m3-OFc" secondAttribute="bottom" constant="2" id="Dbc-GP-LVc"/>
+                            <constraint firstItem="4mu-KN-kBQ" firstAttribute="top" secondItem="pXO-dG-GcP" secondAttribute="top" id="G2x-Qa-Moz"/>
+                            <constraint firstItem="4mu-KN-kBQ" firstAttribute="leading" secondItem="pXO-dG-GcP" secondAttribute="leading" constant="8" id="Hzg-hG-Qly"/>
+                            <constraint firstItem="CCk-RX-y81" firstAttribute="leading" secondItem="4mu-KN-kBQ" secondAttribute="trailing" constant="4" id="VUv-Hx-i27"/>
+                            <constraint firstItem="CCk-RX-y81" firstAttribute="centerY" secondItem="4mu-KN-kBQ" secondAttribute="centerY" id="een-qS-ki6"/>
+                            <constraint firstAttribute="trailing" secondItem="CCk-RX-y81" secondAttribute="trailing" constant="8" id="zUg-Tk-jeY"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="pXO-dG-GcP" firstAttribute="top" secondItem="Iqo-Pw-oJ5" secondAttribute="top" id="40X-hl-Uja"/>
+                    <constraint firstAttribute="bottom" secondItem="pXO-dG-GcP" secondAttribute="bottom" id="Mbt-pI-cXE"/>
+                    <constraint firstItem="pXO-dG-GcP" firstAttribute="leading" secondItem="Iqo-Pw-oJ5" secondAttribute="leading" id="OLr-du-Djs"/>
+                    <constraint firstAttribute="trailing" secondItem="pXO-dG-GcP" secondAttribute="trailing" id="jrV-0q-jh1"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="selectUniversityButton_Width" destination="d1V-av-M2W" id="J82-Rb-LjT"/>
+                <outlet property="selectUniversity_btn" destination="CCk-RX-y81" id="yLm-er-kjk"/>
+                <outlet property="selectUniversity_lbl" destination="4mu-KN-kBQ" id="bgm-Fs-2pQ"/>
+            </connections>
+            <point key="canvasLocation" x="51.200000000000003" y="53.973013493253376"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="appDarKGray">
+            <color red="0.2669999897480011" green="0.2669999897480011" blue="0.2669999897480011" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Arcon-Regular.otf">
+            <string>Arcon-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TrendingCollectionViewCell" id="pei-QG-cu8" customClass="TrendingCollectionViewCell" customModule="Unilife" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="120" height="119"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                <rect key="frame" x="0.0" y="0.0" width="120" height="119"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N5N-Qk-hId" customClass="SetView" customModule="Unilife" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="120" height="119"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="trending-offer1" translatesAutoresizingMaskIntoConstraints="NO" id="a7N-U8-9cb">
+                                <rect key="frame" x="0.0" y="0.0" width="120" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="Ic3-Oy-bjM"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CEY-nh-SJd">
+                                <rect key="frame" x="0.0" y="100" width="120" height="1"/>
+                                <color key="backgroundColor" name="appLightGreyColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="udE-kK-GMF"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cGA-Id-a9q">
+                                <rect key="frame" x="0.0" y="101" width="120" height="18"/>
+                                <color key="backgroundColor" red="0.76470588240000004" green="0.070588235289999995" blue="0.19215686269999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="18" id="5cu-tJ-IlA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Arcon-Regular" family="Arcon" pointSize="15"/>
+                                <color key="textColor" name="appDarKGray"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="cGA-Id-a9q" secondAttribute="trailing" id="9Q2-4B-Rre"/>
+                            <constraint firstItem="CEY-nh-SJd" firstAttribute="leading" secondItem="a7N-U8-9cb" secondAttribute="leading" id="AQp-ri-pig"/>
+                            <constraint firstItem="CEY-nh-SJd" firstAttribute="top" secondItem="a7N-U8-9cb" secondAttribute="bottom" id="FXr-Ju-llf"/>
+                            <constraint firstAttribute="trailing" secondItem="a7N-U8-9cb" secondAttribute="trailing" id="KxX-QC-Ikb"/>
+                            <constraint firstItem="cGA-Id-a9q" firstAttribute="top" secondItem="CEY-nh-SJd" secondAttribute="bottom" id="NRB-Je-ra7"/>
+                            <constraint firstItem="a7N-U8-9cb" firstAttribute="leading" secondItem="N5N-Qk-hId" secondAttribute="leading" id="TlA-QI-PJ6"/>
+                            <constraint firstItem="CEY-nh-SJd" firstAttribute="trailing" secondItem="a7N-U8-9cb" secondAttribute="trailing" id="XFC-TH-Vb6"/>
+                            <constraint firstAttribute="bottom" secondItem="cGA-Id-a9q" secondAttribute="bottom" id="cwb-3c-gNL"/>
+                            <constraint firstItem="cGA-Id-a9q" firstAttribute="leading" secondItem="N5N-Qk-hId" secondAttribute="leading" id="j39-gg-SzF"/>
+                            <constraint firstItem="a7N-U8-9cb" firstAttribute="top" secondItem="N5N-Qk-hId" secondAttribute="top" id="pKb-Wc-3bg"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="CornerRadius">
+                                <real key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="BorderWidth">
+                                <real key="value" value="0.5"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="BorderColor">
+                                <color key="value" name="appDarKGray"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="N5N-Qk-hId" secondAttribute="bottom" id="VnZ-eW-qDB"/>
+                <constraint firstItem="N5N-Qk-hId" firstAttribute="leading" secondItem="pei-QG-cu8" secondAttribute="leading" id="VuB-6T-hdm"/>
+                <constraint firstItem="N5N-Qk-hId" firstAttribute="top" secondItem="pei-QG-cu8" secondAttribute="top" id="Z0J-gf-Xph"/>
+                <constraint firstAttribute="trailing" secondItem="N5N-Qk-hId" secondAttribute="trailing" id="gAi-QT-sib"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fmi-p4-GuL"/>
+            <connections>
+                <outlet property="productDiscount_lbl" destination="cGA-Id-a9q" id="78G-Sk-FVR"/>
+                <outlet property="product_ImageView" destination="a7N-U8-9cb" id="HW7-Bn-QaE"/>
+            </connections>
+            <point key="canvasLocation" x="44.799999999999997" y="277.51124437781112"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="trending-offer1" width="200" height="200"/>
+        <namedColor name="appDarKGray">
+            <color red="0.2669999897480011" green="0.2669999897480011" blue="0.2669999897480011" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="appLightGreyColor">
+            <color red="0.62400001287460327" green="0.61599999666213989" blue="0.61599999666213989" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

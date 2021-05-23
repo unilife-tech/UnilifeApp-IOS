@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Arcon-Regular.otf">
+            <string>Arcon-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="RBm-2P-QKr" customClass="TopSlider" customModule="Unilife" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vL9-Ed-92n">
+                    <rect key="frame" x="0.0" y="657" width="375" height="0.0"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="lessThanOrEqual" constant="20" id="Upd-x1-imV"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Arcon-Regular" family="Arcon" pointSize="15"/>
+                    <color key="textColor" name="appSkyBlue"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" misplaced="YES" image="slider-image" translatesAutoresizingMaskIntoConstraints="NO" id="Yiw-t2-TlQ" customClass="SetImage" customModule="Unilife" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="24" width="367" height="633"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="Yiw-t2-TlQ" secondAttribute="height" multiplier="367:633" id="s2G-VZ-yRI"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="EnableShadow" value="NO"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="ShadowOffsetY">
+                            <real key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="Q7h-MS-7I3" firstAttribute="trailing" secondItem="Yiw-t2-TlQ" secondAttribute="trailing" constant="4" id="0ru-5A-ES4"/>
+                <constraint firstItem="Q7h-MS-7I3" firstAttribute="bottom" secondItem="vL9-Ed-92n" secondAttribute="bottom" constant="10" id="CR1-kM-cBN"/>
+                <constraint firstItem="Yiw-t2-TlQ" firstAttribute="top" secondItem="Q7h-MS-7I3" secondAttribute="top" constant="4" id="Llk-aW-VZi"/>
+                <constraint firstItem="vL9-Ed-92n" firstAttribute="top" secondItem="Yiw-t2-TlQ" secondAttribute="bottom" id="a1g-mQ-Grr"/>
+                <constraint firstItem="Q7h-MS-7I3" firstAttribute="trailing" secondItem="vL9-Ed-92n" secondAttribute="trailing" id="l5t-h7-kN6"/>
+                <constraint firstItem="Yiw-t2-TlQ" firstAttribute="leading" secondItem="Q7h-MS-7I3" secondAttribute="leading" constant="4" id="pPb-ca-DhT"/>
+                <constraint firstItem="vL9-Ed-92n" firstAttribute="leading" secondItem="Q7h-MS-7I3" secondAttribute="leading" id="uN5-kF-gRw"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Q7h-MS-7I3"/>
+            <connections>
+                <outlet property="slideName_lbl" destination="vL9-Ed-92n" id="dGu-ti-Adh"/>
+                <outlet property="sliderImage" destination="Yiw-t2-TlQ" id="lmo-6V-90U"/>
+            </connections>
+            <point key="canvasLocation" x="237.59999999999999" y="-548.27586206896558"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="slider-image" width="270" height="150"/>
+        <namedColor name="appSkyBlue">
+            <color red="0.0" green="0.68627450980392157" blue="0.93725490196078431" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
