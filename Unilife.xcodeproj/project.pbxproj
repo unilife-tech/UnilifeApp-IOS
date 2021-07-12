@@ -253,6 +253,7 @@
 		35DE05F323F534C900147019 /* RemoveParticipnatsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DE05F223F534C900147019 /* RemoveParticipnatsTableViewCell.swift */; };
 		35E51177230E65500031F082 /* ViewProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E51176230E65500031F082 /* ViewProfileTableViewCell.swift */; };
 		35E51179230E65750031F082 /* ViewProfileCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E51178230E65750031F082 /* ViewProfileCollectionViewCell.swift */; };
+		3D74A90E269C185D0054BA52 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D74A90D269C185C0054BA52 /* Home.storyboard */; };
 		3E7C422E2350935A00F24C9B /* UniLifeBlogsQT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E7C422D2350935A00F24C9B /* UniLifeBlogsQT.swift */; };
 		689E84536B65B51763167BED /* Pods_Unilife.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEF9F7DDC66ACCD79BCAAAC3 /* Pods_Unilife.framework */; };
 		8B03ED1724BE1FC300C39B90 /* ContactInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B03ED1624BE1FC300C39B90 /* ContactInfoVC.swift */; };
@@ -288,7 +289,6 @@
 		8B8462B9247446970040556C /* AuthenticationHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8462B6247446970040556C /* AuthenticationHeader.swift */; };
 		8B8462BA247446970040556C /* WebServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8462B7247446970040556C /* WebServiceManager.swift */; };
 		8B8462BD2474480F0040556C /* Reach.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8462BC2474480F0040556C /* Reach.swift */; };
-		8B8850D4246FECA700D13CE7 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B8850D3246FECA700D13CE7 /* Home.storyboard */; };
 		8B8850D7246FEEFD00D13CE7 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8850D6246FEEFD00D13CE7 /* HomeVC.swift */; };
 		8B8850DA246FFB6600D13CE7 /* DarkShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8850D9246FFB6600D13CE7 /* DarkShadowView.swift */; };
 		8B8850E82470056F00D13CE7 /* Roboto-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8B8850DC2470056E00D13CE7 /* Roboto-MediumItalic.ttf */; };
@@ -885,6 +885,7 @@
 		35DE05F223F534C900147019 /* RemoveParticipnatsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveParticipnatsTableViewCell.swift; sourceTree = "<group>"; };
 		35E51176230E65500031F082 /* ViewProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewProfileTableViewCell.swift; sourceTree = "<group>"; };
 		35E51178230E65750031F082 /* ViewProfileCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewProfileCollectionViewCell.swift; sourceTree = "<group>"; };
+		3D74A90D269C185C0054BA52 /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		3E7C422D2350935A00F24C9B /* UniLifeBlogsQT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniLifeBlogsQT.swift; sourceTree = "<group>"; };
 		8B03ED1624BE1FC300C39B90 /* ContactInfoVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactInfoVC.swift; sourceTree = "<group>"; };
 		8B058CC024701B9B00D6517C /* HomeVideoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeVideoCell.swift; sourceTree = "<group>"; };
@@ -919,7 +920,6 @@
 		8B8462B6247446970040556C /* AuthenticationHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationHeader.swift; sourceTree = "<group>"; };
 		8B8462B7247446970040556C /* WebServiceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebServiceManager.swift; sourceTree = "<group>"; };
 		8B8462BC2474480F0040556C /* Reach.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reach.swift; sourceTree = "<group>"; };
-		8B8850D3246FECA700D13CE7 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Home.storyboard; path = "../../../../../../../../../../../../../System/Volumes/Data/Users/developer/Documents/ALLData/OtherDetail/Faltu2/RU/untitled folder/Unilife/uBitbuccket/Unilife/Phase2/NewStoryBoard/Home.storyboard"; sourceTree = "<group>"; };
 		8B8850D6246FEEFD00D13CE7 /* HomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		8B8850D9246FFB6600D13CE7 /* DarkShadowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DarkShadowView.swift; sourceTree = "<group>"; };
 		8B8850DC2470056E00D13CE7 /* Roboto-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-MediumItalic.ttf"; sourceTree = "<group>"; };
@@ -1253,7 +1253,7 @@
 		8BE509EE2479262B00672F35 /* SkillProfileVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkillProfileVC.swift; sourceTree = "<group>"; };
 		8BE509F0247949FA00672F35 /* InterestProfileVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterestProfileVC.swift; sourceTree = "<group>"; };
 		8BE8DF4A2476FC6A00A79E5F /* AddEducationVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddEducationVC.swift; sourceTree = "<group>"; };
-		8BE8DF4B2476FC6A00A79E5F /* AddExperienceVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddExperienceVC.swift; sourceTree = "<group>"; };
+		8BE8DF4B2476FC6A00A79E5F /* AddExperienceVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddExperienceVC.swift; path = ../../../../../../../../Desktop/uli/Unilife/Phase2/AllVIewController/MyProfile/AddExperienceVC.swift; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BE8DF4C2476FC6A00A79E5F /* AddSocialVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddSocialVC.swift; sourceTree = "<group>"; };
 		8BE8DF4D2476FC6B00A79E5F /* AddAchivementVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddAchivementVC.swift; sourceTree = "<group>"; };
 		8BEBDBF3248134460011DBC0 /* PollAddOptionsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PollAddOptionsCell.swift; sourceTree = "<group>"; };
@@ -2592,7 +2592,7 @@
 			children = (
 				8BA91B0B246B2E7600384495 /* Phase2.storyboard */,
 				8BA91B0F246B2ED800384495 /* MYProfileEdit.storyboard */,
-				8B8850D3246FECA700D13CE7 /* Home.storyboard */,
+				3D74A90D269C185C0054BA52 /* Home.storyboard */,
 				8B2F29B424EAF503004DDEC4 /* Login.storyboard */,
 			);
 			path = NewStoryBoard;
@@ -3288,6 +3288,7 @@
 				8BAC65FA24FD5F7D00FD4623 /* ck.png in Resources */,
 				8BAC663F24FD5F7D00FD4623 /* dz.png in Resources */,
 				8BAC663224FD5F7D00FD4623 /* cu.png in Resources */,
+				3D74A90E269C185D0054BA52 /* Home.storyboard in Resources */,
 				8BAC661124FD5F7D00FD4623 /* sr.png in Resources */,
 				8BAC665024FD5F7D00FD4623 /* cw.png in Resources */,
 				8BAC667824FD5F7D00FD4623 /* vi.png in Resources */,
@@ -3412,7 +3413,6 @@
 				8BAC65BF24FD5F7D00FD4623 /* na.png in Resources */,
 				8BAC66B524FD5F7D00FD4623 /* nf.png in Resources */,
 				8BAC660F24FD5F7D00FD4623 /* sc.png in Resources */,
-				8B8850D4246FECA700D13CE7 /* Home.storyboard in Resources */,
 				8BAC668C24FD5F7D00FD4623 /* gb.png in Resources */,
 				8BAC65BE24FD5F7D00FD4623 /* to.png in Resources */,
 				8BAC664D24FD5F7D00FD4623 /* uz.png in Resources */,
@@ -4043,7 +4043,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -4101,7 +4101,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PROVISIONING_PROFILE_SPECIFIER = Unilife_LiveStore;

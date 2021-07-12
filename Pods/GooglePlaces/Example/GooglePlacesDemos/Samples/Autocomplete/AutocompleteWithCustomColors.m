@@ -1,5 +1,5 @@
 /*
- * Copyright 2016 Google Inc. All rights reserved.
+ * Copyright 2016 Google LLC. All rights reserved.
  *
  *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not use this
@@ -27,6 +27,8 @@
 @implementation GMSStyledAutocompleteViewController
 @end
 
+static CGFloat const kButtonPadding = 10.f;
+
 @interface AutocompleteWithCustomColors () <GMSAutocompleteViewControllerDelegate>
 @end
 
@@ -43,7 +45,15 @@
 - (void)viewDidLoad {
   [super viewDidLoad];
 
+#if defined(__IPHONE_13_0) && (__IPHONE_OS_VERSION_MAX_ALLOWED >= __IPHONE_13_0)
+  if (@available(iOS 13.0, *)) {
+    self.view.backgroundColor = [UIColor systemBackgroundColor];
+  } else {
+    self.view.backgroundColor = [UIColor whiteColor];
+  }
+#else
   self.view.backgroundColor = [UIColor whiteColor];
+#endif  // defined(__IPHONE_13_0) && __IPHONE_OS_VERSION_MAX_ALLOWED >= __IPHONE_13_0
 
   NSString *titleYellowAndBrown =
       NSLocalizedString(@"Demo.Content.Autocomplete.Styling.Colors.YellowAndBrown",
@@ -60,99 +70,62 @@
 
   UIButton *brownThemeButton = [UIButton buttonWithType:UIButtonTypeSystem];
   [brownThemeButton setTitle:titleYellowAndBrown forState:UIControlStateNormal];
+  [brownThemeButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
   [brownThemeButton addTarget:self
                        action:@selector(openBrownTheme:)
              forControlEvents:UIControlEventTouchUpInside];
   brownThemeButton.translatesAutoresizingMaskIntoConstraints = NO;
   [self.view addSubview:brownThemeButton];
-  [NSLayoutConstraint constraintWithItem:brownThemeButton
-                               attribute:NSLayoutAttributeTop
-                               relatedBy:NSLayoutRelationEqual
-                                  toItem:self.topLayoutGuide
-                               attribute:NSLayoutAttributeBottom
-                              multiplier:1
-                                constant:8]
+  [brownThemeButton.centerXAnchor constraintEqualToAnchor:self.view.centerXAnchor].active = YES;
+  [brownThemeButton.topAnchor constraintEqualToAnchor:self.view.topAnchor constant:kButtonTopMargin]
       .active = YES;
-  [NSLayoutConstraint constraintWithItem:brownThemeButton
-                               attribute:NSLayoutAttributeCenterX
-                               relatedBy:NSLayoutRelationEqual
-                                  toItem:self.view
-                               attribute:NSLayoutAttributeCenterX
-                              multiplier:1
-                                constant:0]
-      .active = YES;
+  [brownThemeButton.heightAnchor constraintEqualToConstant:kButtonHeight].active = YES;
+  [brownThemeButton.widthAnchor constraintEqualToConstant:kButtonWidth].active = YES;
 
   UIButton *blackThemeButton = [UIButton buttonWithType:UIButtonTypeSystem];
   [blackThemeButton setTitle:titleWhiteOnBlack forState:UIControlStateNormal];
+  [blackThemeButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
   [blackThemeButton addTarget:self
                        action:@selector(openBlackTheme:)
              forControlEvents:UIControlEventTouchUpInside];
   blackThemeButton.translatesAutoresizingMaskIntoConstraints = NO;
   [self.view addSubview:blackThemeButton];
-  [NSLayoutConstraint constraintWithItem:blackThemeButton
-                               attribute:NSLayoutAttributeTop
-                               relatedBy:NSLayoutRelationEqual
-                                  toItem:brownThemeButton
-                               attribute:NSLayoutAttributeBottom
-                              multiplier:1
-                                constant:8]
+  [blackThemeButton.centerXAnchor constraintEqualToAnchor:self.view.centerXAnchor].active = YES;
+  [blackThemeButton.topAnchor constraintEqualToAnchor:brownThemeButton.bottomAnchor
+                                             constant:kButtonPadding]
       .active = YES;
-  [NSLayoutConstraint constraintWithItem:blackThemeButton
-                               attribute:NSLayoutAttributeCenterX
-                               relatedBy:NSLayoutRelationEqual
-                                  toItem:self.view
-                               attribute:NSLayoutAttributeCenterX
-                              multiplier:1
-                                constant:0]
-      .active = YES;
+  [blackThemeButton.heightAnchor constraintEqualToConstant:kButtonHeight].active = YES;
+  [blackThemeButton.widthAnchor constraintEqualToConstant:kButtonWidth].active = YES;
 
   UIButton *blueThemeButton = [UIButton buttonWithType:UIButtonTypeSystem];
   [blueThemeButton setTitle:titleBlueColors forState:UIControlStateNormal];
+  [blueThemeButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
   [blueThemeButton addTarget:self
                       action:@selector(openBlueTheme:)
             forControlEvents:UIControlEventTouchUpInside];
   blueThemeButton.translatesAutoresizingMaskIntoConstraints = NO;
   [self.view addSubview:blueThemeButton];
-  [NSLayoutConstraint constraintWithItem:blueThemeButton
-                               attribute:NSLayoutAttributeTop
-                               relatedBy:NSLayoutRelationEqual
-                                  toItem:blackThemeButton
-                               attribute:NSLayoutAttributeBottom
-                              multiplier:1
-                                constant:8]
+  [blueThemeButton.centerXAnchor constraintEqualToAnchor:self.view.centerXAnchor].active = YES;
+  [blueThemeButton.topAnchor constraintEqualToAnchor:blackThemeButton.bottomAnchor
+                                            constant:kButtonPadding]
       .active = YES;
-  [NSLayoutConstraint constraintWithItem:blueThemeButton
-                               attribute:NSLayoutAttributeCenterX
-                               relatedBy:NSLayoutRelationEqual
-                                  toItem:self.view
-                               attribute:NSLayoutAttributeCenterX
-                              multiplier:1
-                                constant:0]
-      .active = YES;
+  [blueThemeButton.heightAnchor constraintEqualToConstant:kButtonHeight].active = YES;
+  [blueThemeButton.widthAnchor constraintEqualToConstant:kButtonWidth].active = YES;
 
   UIButton *hotDogThemeButton = [UIButton buttonWithType:UIButtonTypeSystem];
   [hotDogThemeButton setTitle:titleHotDogStand forState:UIControlStateNormal];
+  [hotDogThemeButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
   [hotDogThemeButton addTarget:self
                         action:@selector(openHotDogTheme:)
               forControlEvents:UIControlEventTouchUpInside];
   hotDogThemeButton.translatesAutoresizingMaskIntoConstraints = NO;
   [self.view addSubview:hotDogThemeButton];
-  [NSLayoutConstraint constraintWithItem:hotDogThemeButton
-                               attribute:NSLayoutAttributeTop
-                               relatedBy:NSLayoutRelationEqual
-                                  toItem:blueThemeButton
-                               attribute:NSLayoutAttributeBottom
-                              multiplier:1
-                                constant:8]
+  [hotDogThemeButton.centerXAnchor constraintEqualToAnchor:self.view.centerXAnchor].active = YES;
+  [hotDogThemeButton.topAnchor constraintEqualToAnchor:blueThemeButton.bottomAnchor
+                                              constant:kButtonPadding]
       .active = YES;
-  [NSLayoutConstraint constraintWithItem:hotDogThemeButton
-                               attribute:NSLayoutAttributeCenterX
-                               relatedBy:NSLayoutRelationEqual
-                                  toItem:self.view
-                               attribute:NSLayoutAttributeCenterX
-                              multiplier:1
-                                constant:0]
-      .active = YES;
+  [hotDogThemeButton.heightAnchor constraintEqualToConstant:kButtonHeight].active = YES;
+  [hotDogThemeButton.widthAnchor constraintEqualToConstant:kButtonWidth].active = YES;
 
   self.definesPresentationContext = YES;
 
@@ -273,16 +246,18 @@
                                       searchBarTintColor:(UIColor *)searchBarTintColor
                                           separatorColor:(UIColor *)separatorColor {
   // Use UIAppearance proxies to change the appearance of UI controls in
-  // GMSAutocompleteViewController. Here we use appearanceWhenContainedIn to localise changes to
-  // just this part of the Demo app. This will generally not be necessary in a real application as
-  // you will probably want the same theme to apply to all elements in your app.
-  UIActivityIndicatorView *appearence = [UIActivityIndicatorView
-      appearanceWhenContainedIn:[GMSStyledAutocompleteViewController class], nil];
-  [appearence setColor:primaryTextColor];
+  // GMSAutocompleteViewController. Here we use appearanceWhenContainedInInstancesOfClasses to
+  // localise changes to just this part of the Demo app. This will generally not be necessary in a
+  // real application as you will probably want the same theme to apply to all elements in your app.
+  UIActivityIndicatorView *appearance = [UIActivityIndicatorView
+      appearanceWhenContainedInInstancesOfClasses:@ [[GMSStyledAutocompleteViewController class]]];
+  [appearance setColor:primaryTextColor];
 
-  [[UINavigationBar appearanceWhenContainedIn:[GMSStyledAutocompleteViewController class], nil]
+  [[UINavigationBar
+      appearanceWhenContainedInInstancesOfClasses:@ [[GMSStyledAutocompleteViewController class]]]
       setBarTintColor:darkBackgroundColor];
-  [[UINavigationBar appearanceWhenContainedIn:[GMSStyledAutocompleteViewController class], nil]
+  [[UINavigationBar
+      appearanceWhenContainedInInstancesOfClasses:@ [[GMSStyledAutocompleteViewController class]]]
       setTintColor:searchBarTintColor];
 
   // Color of typed text in search bar.
@@ -290,7 +265,8 @@
     NSForegroundColorAttributeName : searchBarTintColor,
     NSFontAttributeName : [UIFont systemFontOfSize:[UIFont systemFontSize]]
   };
-  [[UITextField appearanceWhenContainedIn:[GMSStyledAutocompleteViewController class], nil]
+  [[UITextField
+      appearanceWhenContainedInInstancesOfClasses:@ [[GMSStyledAutocompleteViewController class]]]
       setDefaultTextAttributes:searchBarTextAttributes];
 
   // Color of the "Search" placeholder text in search bar. For this example, we'll make it the same
@@ -305,14 +281,15 @@
   NSAttributedString *attributedPlaceholder =
       [[NSAttributedString alloc] initWithString:@"Search" attributes:placeholderAttributes];
 
-  [[UITextField appearanceWhenContainedIn:[GMSStyledAutocompleteViewController class], nil]
+  [[UITextField
+      appearanceWhenContainedInInstancesOfClasses:@ [[GMSStyledAutocompleteViewController class]]]
       setAttributedPlaceholder:attributedPlaceholder];
 
   // Change the background color of selected table cells.
   UIView *selectedBackgroundView = [[UIView alloc] init];
   selectedBackgroundView.backgroundColor = selectedTableCellBackgroundColor;
-  id tableCellAppearance =
-      [UITableViewCell appearanceWhenContainedIn:[GMSStyledAutocompleteViewController class], nil];
+  id tableCellAppearance = [UITableViewCell
+      appearanceWhenContainedInInstancesOfClasses:@ [[GMSStyledAutocompleteViewController class]]];
   [tableCellAppearance setSelectedBackgroundView:selectedBackgroundView];
 
   // Depending on the navigation bar background color, it might also be necessary to customise the
@@ -321,8 +298,6 @@
 
   GMSAutocompleteViewController *acController = [[GMSStyledAutocompleteViewController alloc] init];
   acController.delegate = self;
-  acController.autocompleteBoundsMode = self.autocompleteBoundsMode;
-  acController.autocompleteBounds = self.autocompleteBounds;
   acController.autocompleteFilter = self.autocompleteFilter;
   acController.placeFields = self.placeFields;
   acController.tableCellBackgroundColor = backgroundColor;
@@ -344,8 +319,8 @@
  * custom icons in the case where the default gray icons don't match a custom background.
  */
 - (void)setupSearchBarCustomIcons {
-  id searchBarAppearanceProxy =
-      [UISearchBar appearanceWhenContainedIn:[GMSStyledAutocompleteViewController class], nil];
+  id searchBarAppearanceProxy = [UISearchBar
+      appearanceWhenContainedInInstancesOfClasses:@ [[GMSStyledAutocompleteViewController class]]];
   [searchBarAppearanceProxy setImage:[UIImage imageNamed:@"custom_clear_x_high"]
                     forSearchBarIcon:UISearchBarIconClear
                                state:UIControlStateHighlighted];

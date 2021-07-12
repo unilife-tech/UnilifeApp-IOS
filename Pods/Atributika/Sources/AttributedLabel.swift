@@ -8,7 +8,15 @@ import Foundation
 
 import UIKit
 
-open class AttributedLabel: UIView {
+@IBDesignable open class AttributedLabel: UIView {
+
+    open override func prepareForInterfaceBuilder() {
+        super.prepareForInterfaceBuilder()
+        let gray = Style("gray").foregroundColor(.gray)
+        attributedText = "<gray>Attributed</gray>Label"
+            .style(tags: gray)
+        invalidateIntrinsicContentSize()
+    }
     
     //MARK: - private properties
     private let textView = UITextView()
@@ -16,8 +24,21 @@ open class AttributedLabel: UIView {
     
     //MARK: - public properties
     open var onClick: ((AttributedLabel, Detection)->Void)?
+
+    open func rects(for detection: Detection) -> [CGRect] {
+        var result = [CGRect]()
+
+        if let attributedText = state.attributedText {
+            let nsrange = NSRange(detection.range, in: attributedText.string)
+            textView.layoutManager.enumerateEnclosingRects(forGlyphRange: nsrange, withinSelectedGlyphRange: NSRange(location: NSNotFound, length: 0), in: textView.textContainer, using: { (rect, stop) in
+                result.append(rect)
+            })
+        }
+
+        return result
+    }
     
-    open var isEnabled: Bool {
+    @IBInspectable open var isEnabled: Bool {
         set {
             detectionAreaButtons.forEach { $0.isUserInteractionEnabled = newValue  }
             state.isEnabled = newValue
@@ -27,7 +48,7 @@ open class AttributedLabel: UIView {
         }
     }
     
-    open var isSelectable: Bool {
+    @IBInspectable open var isSelectable: Bool {
         get {
             return textView.isUserInteractionEnabled && textView.isSelectable
         }
@@ -47,47 +68,59 @@ open class AttributedLabel: UIView {
         }
     }
     
-    open var numberOfLines: Int {
+    @IBInspectable open var numberOfLines: Int {
         set { textView.textContainer.maximumNumberOfLines = newValue }
         get { return textView.textContainer.maximumNumberOfLines }
     }
     
-    open var lineBreakMode: NSLineBreakMode {
+    @IBInspectable open var lineBreakMode: NSLineBreakMode {
         set { textView.textContainer.lineBreakMode = newValue }
         get { return textView.textContainer.lineBreakMode }
     }
     
-    open var font: UIFont = .preferredFont(forTextStyle: .body) {
+    @available(iOS 10.0, *)
+    @IBInspectable open var adjustsFontForContentSizeCategory: Bool {
+        set { textView.adjustsFontForContentSizeCategory = newValue }
+        get { return textView.adjustsFontForContentSizeCategory }
+    }
+    
+    @IBInspectable open var font: UIFont = .preferredFont(forTextStyle: .body) {
         didSet {
             updateText()
         }
     }
     
-    open var textAlignment: NSTextAlignment = .natural {
+    @IBInspectable open var textAlignment: NSTextAlignment = .natural {
         didSet {
             updateText()
         }
     }
     
-    open var textColor: UIColor = .black {
+    @IBInspectable open var textColor: UIColor = {
+        if #available(iOS 13.0, *) {
+            return .label
+        } else {
+            return .black
+        }
+        }() {
         didSet {
             updateText()
         }
     }
     
-    open var shadowColor: UIColor? {
+    @IBInspectable open var shadowColor: UIColor? {
         didSet {
             updateText()
         }
     }
     
-    open var shadowOffset = CGSize(width: 0, height: -1) {
+    @IBInspectable open var shadowOffset = CGSize(width: 0, height: -1) {
         didSet {
             updateText()
         }
     }
     
-    open var shadowBlurRadius: CGFloat = 0 {
+    @IBInspectable open var shadowBlurRadius: CGFloat = 0 {
         didSet {
             updateText()
         }
@@ -120,15 +153,10 @@ open class AttributedLabel: UIView {
         
         textView.translatesAutoresizingMaskIntoConstraints = false
         
-        if #available(iOS 9.0, *) {
-            textView.topAnchor.constraint(equalTo: topAnchor).isActive = true
-            textView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
-            textView.leftAnchor.constraint(equalTo: leftAnchor).isActive = true
-            textView.rightAnchor.constraint(equalTo: rightAnchor).isActive = true
-        } else {
-            addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[textView]|", options: [], metrics: nil, views: ["textView": textView]))
-            addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[textView]|", options: [], metrics: nil, views: ["textView": textView]))
-        }
+        textView.topAnchor.constraint(equalTo: topAnchor).isActive = true
+        textView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
+        textView.leftAnchor.constraint(equalTo: leftAnchor).isActive = true
+        textView.rightAnchor.constraint(equalTo: rightAnchor).isActive = true
     }
     
     //MARK: - overrides
@@ -158,8 +186,12 @@ open class AttributedLabel: UIView {
         return textView.sizeThatFits(size)
     }
     
-    open override var intrinsicContentSize: CGSize {
-        return textView.intrinsicContentSize
+    open override var forFirstBaselineLayout: UIView {
+        return textView
+    }
+    
+    open override var forLastBaselineLayout: UIView {
+        return textView
     }
     
     //MARK: - DetectionAreaButton
@@ -254,7 +286,22 @@ open class AttributedLabel: UIView {
         })
         result.endEditing()
         
-        textView.attributedText = result
+        
+        if #available(iOS 10.0, *) {
+            let shouldAdjustsFontForContentSizeCategory = textView.adjustsFontForContentSizeCategory
+            
+            if shouldAdjustsFontForContentSizeCategory {
+                textView.adjustsFontForContentSizeCategory = false
+            }
+            
+            textView.attributedText = result
+            
+            if shouldAdjustsFontForContentSizeCategory {
+                textView.adjustsFontForContentSizeCategory = true
+            }
+        } else {
+            textView.attributedText = string
+        }
     }
     
     private func updateText() {

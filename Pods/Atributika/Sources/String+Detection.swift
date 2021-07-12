@@ -1,7 +1,4 @@
 //
-//  Detection.swift
-//  Atributika
-//
 //  Created by Pavel Sharanda on 21.02.17.
 //  Copyright © 2017 psharanda. All rights reserved.
 //
@@ -20,7 +17,7 @@ public struct TagInfo {
 }
 
 public enum TagType {
-    case start
+    case start  //includes self-closing tags like <img />
     case end
 }
 
@@ -56,7 +53,7 @@ extension String {
             return nil
         }
         
-        var attrubutes = [String: String]()
+        var attributes = [String: String]()
         
         while parseAttributes && !tagScanner.isAtEnd {
             
@@ -83,10 +80,10 @@ extension String {
                 break
             }
             
-            attrubutes[name] = value.replacingOccurrences(of: "&quot;", with: "\"")
+            attributes[name] = value.replacingOccurrences(of: "&quot;", with: "\"")
         }
         
-        return Tag(name: tagName, attributes: attrubutes)
+        return Tag(name: tagName, attributes: attributes)
     }
     
     public func detectTags(transformers: [TagTransformer] = []) -> (string: String, tagsInfo: [TagInfo]) {
@@ -130,9 +127,13 @@ extension String {
                                         }) {
                                             resultString.append(transformer.transform(tag))
                                         }
-                                        
-                                        if tagType == .start {
-                                            tagsStack.append((tag, resultTextEndIndex, (tagsStack.last?.2 ?? -1) + 1))
+
+                                        let nextLevel = (tagsStack.last?.2 ?? -1) + 1
+
+                                        if tagString.last == "/" {
+                                            tagsResult.append(TagInfoInternal(tag: tag, rangeStart: resultTextEndIndex, rangeEnd: resultTextEndIndex, level: nextLevel))
+                                        } else if tagType == .start {
+                                            tagsStack.append((tag, resultTextEndIndex, nextLevel))
                                         } else {
                                             for (index, (tagInStack, startIndex, level)) in tagsStack.enumerated().reversed() {
                                                 if tagInStack.name.lowercased() == tag.name.lowercased() {
@@ -197,12 +198,12 @@ extension String {
     
     public func detectHashTags() -> [Range<String.Index>] {
         
-        return detect(regex: "[#]\\w\\S*\\b")
+        return detect(regex: "#[^[:punct:][:space:]]+")
     }
     
     public func detectMentions() -> [Range<String.Index>] {
         
-        return detect(regex: "[@]\\w\\S*\\b")
+        return detect(regex: "@[^[:punct:][:space:]]+")
     }
     
     public func detect(regex: String, options: NSRegularExpression.Options = []) -> [Range<String.Index>] {
